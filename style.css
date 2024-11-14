@@ -1,0 +1,84 @@
+.heading {
+    font: 96px;
+    font-weight: bolder;
+    color: #D9D9D9;
+    text-align: center;
+}
+
+body {
+    background: #4D5D45 scroll;
+    background-image: url("img/snow-falling-png.png");
+}
+
+.containerAdd {
+    display: flex; /* Enable flexbox layout */
+    justify-content: center; /* Centers horizontally */
+    /* align-items: center;     Centers vertically */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.addBox {
+    width: 500px;
+    height: 50px;
+    padding-left: 20px;
+    background-color: #B43B2B;
+    border-radius: 25px;
+    display: flex; 
+    align-items: center;
+    /* justify-content: flex-end; Align items to the right */
+    justify-content: space-between; /* Space items across the width */
+    padding-right: 10px;
+}
+
+.taskInput {
+    flex-grow: 1; /* Make the input take up available space */
+    margin-right: 10px;
+    height: 70%;
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+.addButton {
+    width: 70px;
+    height: 40px;
+    margin-right: 10px;
+    color: #D9D9D9;
+    font-weight: bold;
+    background-color: #7A231D;
+    border-radius: 20px;
+    cursor: pointer; 
+    align-items: flex-end;
+}
+
+.containerTask {
+    display: flex;
+    justify-content: center;
+    height: 100vh; 
+}
+
+.taskBox {
+    width: 500px;
+    height: 50px;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.deleteButton {
+    margin-right: 20px;
+    color: #474B41;
+    background-color: transparent; /* Set to transparent to remove default styling */
+    font-weight: bold;
+    border: none;
+    cursor: pointer; 
+}
+
+.hidden {
+    display: none;
+}
