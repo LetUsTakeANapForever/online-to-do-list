@@ -6,14 +6,19 @@
 }
 
 body {
-    background: #4D5D45 scroll;
+    background: #4D5D45;
     background-image: url("img/snow-falling-png.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh;  make the body take up the full viewport height */
+    /* margin: 0; remove default margin */
 }
-
 .containerAdd {
-    display: flex; /* Enable flexbox layout */
-    justify-content: center; /* Centers horizontally */
-    /* align-items: center;     Centers vertically */
+    display: flex; /* enable flexbox layout */
+    justify-content: center; /* centers horizontally */
+    /* align-items: center;     centers vertically */
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -26,13 +31,13 @@ body {
     border-radius: 25px;
     display: flex; 
     align-items: center;
-    /* justify-content: flex-end; Align items to the right */
-    justify-content: space-between; /* Space items across the width */
+    /* justify-content: flex-end; align items to the right */
+    justify-content: space-between; /* space items across the width */
     padding-right: 10px;
 }
 
 .taskInput {
-    flex-grow: 1; /* Make the input take up available space */
+    flex-grow: 1; /* make the input take up available space */
     margin-right: 10px;
     height: 70%;
     border: none;
@@ -55,7 +60,7 @@ body {
 .containerTask {
     display: flex;
     justify-content: center;
-    height: 100vh; 
+    flex-direction: column; /* align items vertically */
 }
 
 .taskBox {
@@ -68,12 +73,14 @@ body {
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .deleteButton {
     margin-right: 20px;
     color: #474B41;
-    background-color: transparent; /* Set to transparent to remove default styling */
+    background-color: transparent; /* set to transparent to remove default styling */
     font-weight: bold;
     border: none;
     cursor: pointer; 
