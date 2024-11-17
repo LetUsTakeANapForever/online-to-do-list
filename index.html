@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online To-Do List</title>
-    <script src="app.js"></script>
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-    <h1 class="heading">Online To-do List</h1>
+    <h1 class="heading"><br>Online To-do List</h1>
     <div class="containerAdd">
         <div class="addBox">
-            <input type="text" class="taskInput" placeholder="Enter task">
-            <button class="addButton">Add</button>
+            <input id="inputValue" type="text" class="taskInput" placeholder="Enter task">
+            <button id="addBt" class="addButton" onclick="newElement()">Add</button>
         </div>
     </div>
-    <div class="containerTask hidden">
-        <div class="taskBox" id="task">
-            <button class="deleteButton">X</button>
-        </div>
-    </div>
+    <div class="containerTask"></div> <!-- Parent container for tasks -->
+    <script src="app2.js"></script>
 </body>
 </html>
+

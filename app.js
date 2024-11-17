@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function(){
+// Static adding
+
+function newElement() {
     const addButton = document.querySelector(".addButton");
     const containerTask = document.querySelector(".containerTask");
     const taskInput = document.querySelector(".taskInput");
@@ -6,26 +8,27 @@ document.addEventListener("DOMContentLoaded", function(){
     const deleteButton = document.querySelector(".deleteButton");
 
     addButton.addEventListener("click", function(){
-        containerTask.classList.remove("hidden"); // Show the containerTask if hidden
+        containerTask.classList.remove("hidden"); // show the containerTask if hidden
         
-        // Clear any previous task text to avoid duplicates
+        // avoid text duplicates
         const existingTaskText = taskBox.querySelector(".taskText");
         if (existingTaskText) {
             existingTaskText.remove();
         }
 
-        // Create a new span for the task text
         const taskText = document.createElement("span");
-        taskText.classList.add("taskText"); // Add a class for styling if needed
-        taskText.textContent = taskInput.value; // Set the text to input value
+        taskText.classList.add("taskText"); // add a class for styling
+        taskText.textContent = taskInput.value; // set the text to input value
         
-        // Insert the task text before the delete button
+        // insert the task text before the delete button
         taskBox.insertBefore(taskText, taskBox.querySelector(".deleteButton"));
 
-        taskInput.value = ""; // Clear the input field after adding the task
+        taskInput.value = "";
     });
 
     deleteButton.addEventListener("click", function(){
         taskBox.classList.toggle("hidden");
-    });
-});
+    });    
+}
+    
+newElement()
