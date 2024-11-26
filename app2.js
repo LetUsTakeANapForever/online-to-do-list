@@ -7,7 +7,7 @@ function newElement() {
 
     addBt.addEventListener("click", function () {
         // ensure the input is not empty
-        if (inputVal.value.trim() !== "") {
+        if (inputVal.value.trim() !== "")
             // create the task container (child)
             var taskContainer = document.createElement("div");
             taskContainer.classList.add("taskBox"); // add a class for styling
@@ -23,12 +23,8 @@ function newElement() {
 
             taskContainer.appendChild(deleteBt);
             containerParent.appendChild(taskContainer);
-
-            // clear the input field
-            inputVal.value = "";
-        }else{
-            alert("Please enter task")
-        }
+        // clear the input field
+        inputVal.value = "";
     });
 }
 
